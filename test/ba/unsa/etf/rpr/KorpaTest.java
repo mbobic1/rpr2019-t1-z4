@@ -17,11 +17,29 @@ class KorpaTest {
         Artikl artikl1=new Artikl("kesa", 2, "2");
         Korpa k= new Korpa();
         k.dodajArtikl(artikl1);
-        Artikl
+        Artikl pronadji=k.izbaciArtiklSaKodom("2");
+        if(pronadji.getKod().equals(artikl1.getKod())){
+            System.out.println("Uspjesno odradjeno");
+        }
+        else System.out.println("Nije uspjesno odradjeno");
     }
 
     @Test
     void getArtikli() {
+        Artikl artikl1=new Artikl("kesa", 2 , "2");
+        Artikl artikl2= new Artikl("pasta", 8, "36");
+        Artikl artikl3= new Artikl("hemijska", 7, "37");
+        Korpa k= new Korpa();
+        k.dodajArtikl(artikl1);
+        k.dodajArtikl(artikl2);
+        k.dodajArtikl(artikl3);
+        Artikl[] pronadji=k.getArtikli();
+        for(int j=0; j<k.i; j++) {
+            if (pronadji[j].equals(k.getArtikli()[j])){
+                System.out.println("Pronadjen je");
+            }
+            else System.out.println("NIje pronadjen");
+        }
     }
 
     @Test

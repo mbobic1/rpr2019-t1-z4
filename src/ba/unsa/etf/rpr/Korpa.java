@@ -27,6 +27,7 @@ public class Korpa {
     public Artikl[] getArtikli(){
         return artikli;
     }
+
     public int dajUkupnuCijenuArtikala(){
         int ukupna=0;
         for(int j=0; j<i; j++){
